@@ -1,0 +1,128 @@
+<html>
+
+<head>
+
+<title>Registration </title>
+
+<script>
+
+function firstname(){
+var x = document.getElementById("fname").value;
+
+if(x.length==0)
+{
+alert("First name filed length should be atleast 2");
+}
+
+}
+function lastname(){
+var y = document.getElementById("lname").value;
+
+if(y.length==0)
+{
+alert("last name filed length should be atleast 2");
+}
+
+}
+
+function checkAge()
+{
+
+var age = document.getElementById("age").value;
+
+if(age <18)
+{
+alert("Age should be greater than 18");
+
+}
+
+}
+
+function checkContact()
+{
+var c = document.getElementById("contact").value;
+if(isNaN(c) && c.length <10)
+{
+alert("Please Enter valid Mobile Number");
+}
+
+}
+
+function success()
+{
+confirm("Your Form is submitted Click ok to exit");
+
+}
+
+
+</script>
+
+
+<style>
+
+*{
+background-color:#393939;
+
+color:white;
+
+font-weight:500;
+
+margin-top:30px;
+
+
+}
+
+<body>
+align:center;
+</body>
+
+</style>
+</head>
+
+<body>
+<center>
+
+<h1>Online Course Registration</h1>
+
+<form onsubmit=success() method = "post"> 
+
+First Name : <input type = "text" id = "fname" onfocusout = firstname()><br><br>
+
+
+Last Name : <input type = "text" id = "lname"  name ="lname" onfocusout = lastname()><br><br>
+
+
+
+Gender : <input type = "radio" name="gender">  Male  <input type="radio" name = "gender" >Female <br><br>
+
+
+Age :<input type = "text" id ="age" onfocusout = checkAge() ><br><br>
+
+Email : <input type = "email" name = "email"><br><br>
+
+
+Contact No:<input type = "text" name="phn" id ="contact" onfocusout = checkContact()><br><br>
+
+<h4>Select Course</h4><br>
+
+<select>
+<option>Select Course from drop down list </option>
+<option >  Javascript</option>
+<option >  Java</option>
+<option >  React</option>
+<option >  Angular</option>
+<option >  Node-js</option>
+</select><br><br>
+
+<input type = "submit">
+</form>
+
+
+ 
+</center>
+
+</body>
+
+
+
+</html>
